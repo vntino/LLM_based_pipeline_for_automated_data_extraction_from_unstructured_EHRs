@@ -1,0 +1,31 @@
+```report
+{REPORT}
+```llm_prompt
+Return a valid JSON object only according to the requested_json_output_format — do not include ```json, code-fences, triple backticks or any markdown formatting.
+```requested_json_output_format
+{
+  "case_number": <integer>,
+  "date_of_birth": <string>,
+  "date_of_surgery": <string>,
+  "sex": <string>,
+  "chronic_lung_disease": <boolean>,
+  "extracardiac_arteriopathy": <boolean>,
+  "poor_mobility": <boolean>,
+  "previous_cardiac_surgery": <boolean>,
+  "active_endocarditis": <boolean>,
+  "critical_preoperative_state": <boolean>,
+  "dialysis": <boolean>,
+  "creatinine": <number>,
+  "weight": <number>,
+  "diabetes_on_insulin": <boolean>,
+  "ccs_angina_class_4": <boolean>,
+  "lv_function": <string>,
+  "recent_mi": <string>,
+  "pulmonary_hypertension": <string>,
+  "nyha_class": <string>,
+  "thoracic_aorta_surgery": <boolean>,
+  "urgency": <string>,
+  "major_procedure_weight": <string>
+}
+
+
