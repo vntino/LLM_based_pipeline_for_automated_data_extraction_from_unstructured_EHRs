@@ -1,9 +1,11 @@
+**LLM-based pipeline for automated data extraction from unstructured EHRs**
+
 This GitHub repository contains the system files (main LLM API-call Python source code, Ollama structured output source code, LLM prompt system message, and LLM prompt user message 
 developed and implemented in LLM API calling), and the derived evaluation data (gold-standard annotations and LLM outputs) related to the project
 "Open-source large-language-model-based on-premises pipeline for automated data extraction from unstructured electronic health records: a pilot study".
 
 
-A. Repository files
+**A. Repository files**
 
 System files (located in main repository folder):
 - ollama_llm_api_call_source_code.py (main LLM API-call Python source code)
@@ -30,7 +32,7 @@ Derived evaluation data (located in folder: derived_evaluation_data):
 - output_qwen3_32b_q8.xlsx
 
 
-B. Setup 
+**B. Setup**
 
 1. Download and place all system files in the same folder (WORKING_DIRECTORY)
 2. Configure ollama_llm_api_call_source_code.py 
@@ -41,7 +43,7 @@ B. Setup
 3. Enter medical reports in the full_text column of medical_reports.xlsx (one cell per medical report)
 
 
-C. Execution 
+**C. Execution**
 
 1. Execute ollama_llm_api_call_source_code.py
 2. Based on the number of medical reports entered in medical_reports.xlsx, the size of the selected Ollama LLM, and the computing capacity of the system whereon the local Ollama endpoint is deployed
