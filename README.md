@@ -7,7 +7,7 @@ developed and implemented in LLM API calling), and the derived evaluation data (
 
 **A. Repository files**
 
-System files (located in main repository folder):
+LLM API calling system files (located in main repository folder):
 - ollama_llm_api_call_source_code.py (main LLM API-call Python source code)
 - euroscore2_model_strict_grammar.py (Ollama structured output source code) 
 - prompt.txt (LLM prompt system message)
@@ -34,13 +34,28 @@ Derived evaluation data (located in folder: derived_evaluation_data):
 
 **B. Setup**
 
-1. Download and place all system files in the same folder (WORKING_DIRECTORY)
-2. Configure ollama_llm_api_call_source_code.py 
-	- WORKDIR    = pathlib.Path(r"WORKING_DIRECTORY") -> Enter the path of the folder containing all system files (placeholder: WORKING_DIRECTORY).
+1. Download and place all LLM API calling system files in the same folder (WORKING_DIRECTORY)
+2. Install the required Python dependencies:
+```bash
+pip install httpx pandas tenacity pydantic openpyxl
+```
+3. Configure ollama_llm_api_call_source_code.py 
+	- WORKDIR    = pathlib.Path(r"WORKING_DIRECTORY") -> Enter the path of the folder containing all LLM API calling system files (placeholder: WORKING_DIRECTORY).
 	- OUTPUTDIR  = pathlib.Path(r"OUTPUT_DIRECTORY") -> Enter the path of the folder to save LLM output (placeholder: OUTPUT_DIRECTORY)
-	- OLLAMA_URL = "LOCAL_OLLAMA_ENDPOINT_URL" -> Enter the URL of the local Ollama endpoint (placeholder: LOCAL_OLLAMA_ENDPOINT_URL)
+	- OLLAMA_URL = "LOCAL_OLLAMA_ENDPOINT_URL" -> Enter the URL of the local Ollama "/api/generate" endpoint (placeholder: LOCAL_OLLAMA_ENDPOINT_URL)
 	- MODEL      = "OLLAMA_LLM_NAME" -> Enter the Ollama LLM name (placeholder: OLLAMA_LLM_NAME)
-3. Enter medical reports in the full_text column of medical_reports.xlsx (one cell per medical report)
+```bash
+# Configuration example
+WORKDIR    = pathlib.Path(r"C:\llm.based.data.pipeline")
+OUTPUTDIR  = pathlib.Path(r"C:\llm.based.data.pipeline\output")
+XLSX_FILE  = WORKDIR / "medical_reports.xlsx"
+PROMPT_TXT = WORKDIR / "prompt.txt"
+SYSTEM_TXT = WORKDIR / "system.txt"
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODEL      = "qwen3:30b-a3b-q4_K_M"
+```
+4. Enter medical reports in the full_text column of medical_reports.xlsx (one cell per medical report)
 
 
 **C. Execution**
