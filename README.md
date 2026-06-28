@@ -1,8 +1,7 @@
 **LLM-based pipeline for automated data extraction from unstructured EHRs**
 
-This GitHub repository contains the system files (main LLM API-call Python source code, Ollama structured output source code, LLM prompt system message, and LLM prompt user message 
-developed and implemented in LLM API calling), and the derived evaluation data (gold-standard annotations and LLM outputs) related to the project
-"Open-source large-language-model-based on-premises pipeline for automated data extraction from unstructured electronic health records: a pilot study".
+This GitHub repository contains the system files (main LLM API-call Python source code, Ollama structured output source code, LLM prompt system message, and LLM prompt user message developed and implemented in LLM API calling), and the derived evaluation data (gold-standard annotations and LLM outputs) related to the original research project "Open-source large-language-model-based on-premises pipeline for automated data extraction from unstructured electronic health records: a pilot study" published in BMJ Health & Care Informatics in June 2026 (doi: 10.1136/bmjhci-2025-101956). 
+(NLM style citation: Ntinopoulos V, Rodriguez Cetina Biefer H, Rings L, Rosalia RA, Dzemali O. Open-source large language model-based on-premises pipeline for automated data extraction from unstructured electronic health records: a pilot study. BMJ Health Care Inform. 2026 Jun 1;33(1):e101956. doi: 10.1136/bmjhci-2025-101956. PMID: 42225359; PMCID: PMC13239439.)
 
 
 **A. Repository files**
